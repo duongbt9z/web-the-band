@@ -61,10 +61,11 @@ html {
     height: 46px;
     background-color: black;
     z-index: 3;
+    overflow: hidden;
 }
 
 #nav {
-    display: inline-block;
+    display: block;
 }
 
 #nav>li {
@@ -118,23 +119,26 @@ html {
     float: right;
     line-height: 46px;
     padding: 0 21px;
-
+    position: absolute;
+    top: 0;
+    right: 0;
 }
-
+#header  .menu-icon:hover,
 #header .search-btn:hover {
     cursor: pointer;
-
     background-color: brown;
 }
-
+#header  .menu-icon,
 #header .search-icon {
     color: white;
 }
-
+#header .menu-icon{
+    display: none;
+}
 #slider {
     position: relative;
-    margin-left: -8px;
-    margin-right: -8px;
+    /* margin-left: -8px; */
+    /* margin-right: -8px; */
     margin-top: 46px;
     padding-top: 50%;
     background: url('/assets/img/silder/chicago.jpg') top center/cover no-repeat;
@@ -165,7 +169,7 @@ html {
 
 #content .content-section {
     width: 800px;
-   min-width: 100%;
+   max-width: 100%;
     padding: 64px 0px;
     margin-left: auto;
     margin-right: auto;
@@ -202,8 +206,7 @@ html {
 #content .member-item {
     float: left;
     text-align: center;
-    width: calc(100%/3);
-
+    max-width: calc(100%/3);
 }
 
 #content .member-name {
@@ -212,7 +215,7 @@ html {
 
 #content .member-img {
     margin-top: 15px;
-    width: 154px;
+    max-width: 100%;
     border-radius: 4px;
 }
 
@@ -309,6 +312,7 @@ html {
 
 .contact-content {
     margin-top: 48px;
+    line-height: 1.4;
 }
 
 .contact-form .form-control {
@@ -317,6 +321,7 @@ html {
     width: 100%;
     overflow: hidden;
     outline: none;
+    
 }
 
 .form-submit-btn {

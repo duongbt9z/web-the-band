@@ -1,0 +1,22 @@
+@media (max-width:740px){
+    #nav li {
+        display: block;
+    }
+    #nav li:first-child {
+        display: inline-block ;
+    }
+    #header  .menu-icon{
+        display: inline-block;
+    }
+    #header .search-icon{
+        display: none;
+    }
+    .col-third{
+        width: 100%;
+        margin-top: 16px;
+    }
+    .col-half {
+        width: 100%;
+    }
+
+}
